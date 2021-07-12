@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "CreateUser";
+}
+@model User
+
+<h1>Создание пользователя</h1>
+
+<form asp-action="Create" asp-controller="Home">
+    <div>
+        <label asp-for="Name"/>
+        <input type="text" asp-for="Name" title="Впишите имя пользователя"/>
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div>
+        <label asp-for="Password"></label>
+        <input type="password" asp-for="Password" />
+    </div>
+    <div>
+        <label asp-for="About"></label>
+        <input type="text" asp-for="About" />
+    </div>
+    <div>
+        <input type="submit" value="Сохранить" />
+    </div>
+</form>

@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Все пользователи</h1>
+    @if (ViewBag != null && ViewBag.List != null) {
+        @foreach (User element in ViewBag.List)
+        {
+            <div>
+                <p><b>@element.Name</b></p>
+                @if (@element.About != null)
+                {
+                <span>@element.About</span>
+                }
+            </div>
+        }
+    }
+    
+    <img src="~/Content/istockphoto-825383494-612x612.jpg" width="300" />
+</div>
