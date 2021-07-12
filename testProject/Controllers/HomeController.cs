@@ -30,7 +30,7 @@ namespace testProject.Controllers
                 .ToList();
             return View();
         }
-
+        //
         public IActionResult Privacy()
         {
             return View();
